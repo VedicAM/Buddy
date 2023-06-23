@@ -154,7 +154,6 @@ int main(){
  rotationY[1][0] = 0; rotationY[1][1] = 1; rotationY[1][2] = 0;
  rotationY[2][0] = -sinRes; rotationY[2][1] = 0; rotationY[2][2] = cosRes;
 
- /* Clear the screen */
  points[0].x = 25; points[0].y = 25; points[0].z = 25;
  points[1].x = 50; points[1].y = 25; points[1].z = 25;
  points[2].x = 50; points[2].y = 50; points[2].z = 25;
