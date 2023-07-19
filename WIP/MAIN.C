@@ -9,15 +9,13 @@
 
 int kc = 0;
 
-int fov = 10;
-
 Vec3D points[] = {{25, 25, 25}, {25, 25, 50},
 		  {50, 25, 25}, {25, 50, 25},
 		  {25, 50, 50}, {50, 25, 50},
 		  {50, 50, 25}, {50, 50, 50}};
 
-float projection[2][3] = {{1, 0, 0},
-			{0, 1, 0}};
+float projection[2][3] = {{1/0.5, 0, 0},
+			{0, 1/0.5, 0}};
 
 void render(){
  int i;
@@ -25,7 +23,8 @@ void render(){
  Vec3D rotated;
 
  for(i = 0; i < sizeof(points)/sizeof(points[0]); i++){
-  rotated = rotateY(points[i]);
+  rotated = rotateZ(points[i], 20);
+  rotated = rotateX(rotated, 20);
   projected2D = matmul2x3(projection, rotated);
 
   SETPIX(projected2D.x, projected2D.y, WHITE);
