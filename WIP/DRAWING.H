@@ -1,3 +1,6 @@
+#ifndef DRAWING_H
+#define DRAWING_H
+
 #include <dos.h>
 #include <math.h>
 
@@ -150,4 +153,6 @@ void drawBackground(){
   }
  }
 
-}
+}
+
+#endif
