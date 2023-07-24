@@ -4,8 +4,9 @@
 #include <math.h>
 
 #include "MATMATH.H"
+#include "DRAWING.H"
 
-Vec3D rotateX(Vec3D point, int angle){
+Vec3D rotateX(Vec3D point, float angle){
  Vec3D returnPoint;
 
  returnPoint.x = point.x;
@@ -15,7 +16,7 @@ Vec3D rotateX(Vec3D point, int angle){
  return returnPoint;
 }
 
-Vec3D rotateY(Vec3D point, int angle){
+Vec3D rotateY(Vec3D point, float angle){
  Vec3D returnPoint;
 
  returnPoint.x = cos(angle * M_PI / 180) * point.x - sin(angle * M_PI / 180) * point.z;
@@ -25,7 +26,7 @@ Vec3D rotateY(Vec3D point, int angle){
  return returnPoint;
 }
 
-Vec3D rotateZ(Vec3D point, int angle){
+Vec3D rotateZ(Vec3D point, float angle){
  Vec3D returnPoint;
 
  returnPoint.x = cos(angle * M_PI / 180) * point.x - sin(angle * M_PI / 180) * point.y;
