@@ -23,9 +23,11 @@ int projectedPointsY[1024];
 float projection[2][3] = {{1/0.35, 0, 0},
 			{0, 1/0.35, 0}};
 
+Mat4x4 transMat;
+
 void render(){
  int i; int j;
- float angle = 0;
+ float angle = 90;
  Vec3D projected2D;
  Vec3D rotated;
 
@@ -52,13 +54,17 @@ int main(){
  clrscr();
  drawBackground();
 
+ transMat = createTransMat(50.0f, 0.0f, -10.0f);
+
  for (i = 0; i < sizeof(houseTreeVerts) / sizeof(houseTreeVerts[0]); i++) {
   points[i] = houseTreeVerts[i];
+  applyTransMat(&points[i], &transMat);
  }
 
  for (i = 0; i < sizeof(houseTreeIndices) / sizeof(houseTreeIndices[0]); i++) {
   indices[i] = houseTreeIndices[i];
  }
+
 
  render();
 
