@@ -1,6 +1,8 @@
 # RacerBoy
-This is a project that is a work in progress but here is currently what is being worked on:
+This is a will be a 3D MS-DOS Racing game that will support computer to computer multiplayer
+
+Here is currently what is being worked on:
 - [X] Draw 3D Points
-- [ ] Loading Models
+- [X] Loading Models
 - [ ] Input
 - [ ] Lighting
