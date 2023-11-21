@@ -8,7 +8,7 @@
 #include "TRANS.H"
 
 /* Models */
-#include "HOMETREE.H"
+#include "MODELS/HOMETREE.H"
 
 int kc = 0;
 
