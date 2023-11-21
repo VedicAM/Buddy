@@ -1,7 +1,7 @@
 #ifndef MATMATH_H
 #define MATMATH_H
 
-typedef struct { int x, y, z; } Vec3D;
+typedef struct Vec3D{ float x, y, z; } Vec3D;
 
 Vec3D matmul2x3(float m[2][3], Vec3D v){
  Vec3D res;

@@ -7,27 +7,15 @@
 #include "MATMATH.H"
 #include "TRANS.H"
 
+/* Models */
+#include "HOMETREE.H"
+
 int kc = 0;
 
-Vec3D points[] = {{25, 25, 50}, {50, 25, 50},
-		  {25, 50, 50}, {50, 50, 50},
-		  {25, 25, 25}, {50, 25, 25},
-		  {25, 50, 25}, {50, 50, 25}};
 
-int indices[] = {
-	 2, 6, 7,
-	 2, 3, 7,
-	 0, 4, 5,
-	 0, 1, 5,
-	 0, 2, 6,
-	 0, 4, 6,
-	 1, 3, 7,
-	 1, 5, 7,
-	 0, 2, 3,
-	 0, 1, 3,
-	 4, 6, 7,
-	 4, 5, 7
-};
+Vec3D points[sizeof(houseTreeVerts)];
+
+int indices[sizeof(houseTreeIndices)];
 
 int projectedPointsX[1024];
 int projectedPointsY[1024];
@@ -37,7 +25,7 @@ float projection[2][3] = {{1/0.35, 0, 0},
 
 void render(){
  int i; int j;
- float angle = 20;
+ float angle = 0;
  Vec3D projected2D;
  Vec3D rotated;
 
@@ -56,11 +44,21 @@ void render(){
 }
 
 
+int i;
+
 int main(){
  setMode(VGA_256_COLOR_MODE);
 
  clrscr();
  drawBackground();
+
+ for (i = 0; i < sizeof(houseTreeVerts) / sizeof(houseTreeVerts[0]); i++) {
+  points[i] = houseTreeVerts[i];
+ }
+
+ for (i = 0; i < sizeof(houseTreeIndices) / sizeof(houseTreeIndices[0]); i++) {
+  indices[i] = houseTreeIndices[i];
+ }
 
  render();
 
