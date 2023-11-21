@@ -17,5 +17,7 @@ Here is currently what is being worked on:
 - [X] Draw 3D Points
 - [X] Loading Models
 - [X] Move Models Using XYZ
+- [ ] Display & Map Textures
 - [ ] Input
 - [ ] Lighting
+- [ ] Model Animations
