@@ -1,5 +1,5 @@
 # Buddy
-This will be a Portable 3D Game Engine that can run on anything! Just like DOOM
+This will be a Portable 3D Game Engine that can run on anything!
 Here is how to load a 3D Model using Buddy:
 
 
