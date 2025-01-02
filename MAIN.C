@@ -29,10 +29,9 @@ int main()
 	setMode(VGA_256_COLOR_MODE);
 
 	clear(BLACK);
-/*
+	
 	triangle(point, point2, point3, WHITE, TRUE);
 	triangle(pointB, pointB2, pointB3, TEAL, TRUE);
-*/
 
 	a = doubleToFixed(3.5);
 	b = doubleToFixed(3.5);
