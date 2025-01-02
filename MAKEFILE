@@ -1,0 +1,12 @@
+CC = wcl
+CFLAGS = -fe=MAIN
+SRC = GRAPHICS\*.c MAIN.C BML\BMM\*.c BML\BFPM\*.c
+
+all: MAIN.EXE
+
+MAIN.EXE: $(SRC)
+	$(CC) $(CFLAGS) $(SRC)
+
+clean:
+	del *.OBJ
+	del MAIN.EXE
