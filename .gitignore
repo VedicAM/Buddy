@@ -1,4 +1,10 @@
+# DS_STORES
 .DS_STORE
+UTIL/.DS_STORE
+GRAPHICS/.DS_STORE
+BML/.DS_STORE
+
+# Compilier Artifacts
 *.OBJ
 *.EXE
 *.ERR
